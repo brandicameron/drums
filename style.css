@@ -1,54 +1,78 @@
 html {
-  font-size: 10px;
-  background: url(img/rave.jpg) bottom center;
-  background-size: cover;
+    font-size: 10px;
 }
 
-body,html {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    animation: pulse 80s ease infinite;
+}
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .keys {
-  display: flex;
-  flex: 1;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 
 .key {
-  border-radius: .5rem;
-  margin: 1rem;
-  font-size: 1.5rem;
-  padding: 2rem .5rem;
-  transition: all .07s ease;
-  width: 10rem;
-  text-align: center;
-  color: white;
-  background: rgba(0,0,0,0.5);
-  text-shadow: 1 0 .8rem black;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 2rem .5rem;
+    transition: all .07s ease;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    text-shadow: 1 0 .8rem black;
 }
 
 .playing {
-  transform: scale(1.1);
-  border: .1rem solid #2a00ff;
-  box-shadow: 0 0 3rem #2a00ff;
+    transform: scale(1.1);
+    border: .1rem solid #2a00ff;
+    box-shadow: 0 0 3rem #2a00ff;
 }
 
 kbd {
-  display: block;
-  font-size: 3.8rem;
-  font-family: sans-serif;
-  font-weight: bold;
+    display: block;
+    font-size: 3.8rem;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 
 .sound {
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: .1rem;
-  color: #fff;
-  text-shadow: 0 .3rem #7200ff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #fff;
+    text-shadow: 0 .3rem #7200ff;
 }
